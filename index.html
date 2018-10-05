@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|PT+Serif:400,700&amp;subset=latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="message">Dziękuję za wiadomość!</div>
+  <div class="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <nav class='main-menu'>
+    <ul>
+      <li class="menu-choise">O mnie</li>
+      <li class="menu-choise">Projekty</li>
+      <li class="menu-choise">Kontakt</li>
+    </ul>
+  </nav>
+  <div class="contactform">
+    <i class="fas fa-times" id='quitForm' style="color: #fff; position: absolute; top: 20px; right: 50px; font-size: 24px; cursor: pointer"></i>
+    <div class="container">
+      <form action="" method="post" class='contact_form'>
+        <h2 class="contact_form-title">Napisz do mnie!</h2>
+        <div class="input_wrapper">
+          <div class="input_wrapper-field">
+            <input type='text' name='name' id='name' class="contact_form-input" required="required" />
+            <label for="name" class="contact_form-label">Imię:</label>
+          </div>
+          <div class="input_wrapper-field">
+            <input type='email' name='email' id='email' class="contact_form-input" required="required" />
+            <label for="email" class="contact_form-label">E-mail:</label>
+          </div>
+        </div>
+        <div class="input_wrapper-field">
+          <textarea name="message" id="message" cols="30" rows="10" required="required"></textarea>
+          <label for="message" class="contact_form-label">Wiadomość:</label>
+        </div>
+        <button type="submit">Wyślij!</button>
+      </form>
+    </div>
+  </div>
+  <span class="logo">&lt;MI /&gt;</span>
+  <header class="hero">
+    <div class="container">
+      <div class="hero__content">
+        <figure>
+          <img src='images/ja.png' />
+          <figcaption>
+
+          </figcaption>
+        </figure>
+        <article>
+          <p>
+            <b>Cześć!</b>
+          </p>
+          <p>
+            Mam na imię Michał i tworzę strony internetowe. Z wykształcenia jestem chemikiem i na codzień pracuję jako
+            chemik analityk w jednej z najszybciej rozwijających się firm biotechnologicznych w Polsce.
+          </p>
+          <p>
+            Programuję w React.js, Redux.js, React-Router, Node.js, ES6, CSS3 i HTML5. Poniżej możesz zobaczyć
+            projekty, które wykonałem!
+        </article>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="projects">
+      <h2 class="title">Projekty</h2>
+      <article class="project">
+        <div>
+          <h3>DSGN</h3>
+          <p>
+            Strona reklamowa, wykonana w ramach akcji weekly webdev challenge. Stronę wykonałem za pomocą HTML5,
+            CSS3 i JavaScript.
+          </p>
+          <div class="icons">
+            <a href="http://weekly-webdev-challenge-8.herokuapp.com/" target='_blank'><i class="fas fa-eye"></i></a>
+            <a href="https://github.com/MichalIrzylowski/weekly-webdev-challenge-8" target='_blank'><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div>
+          <figure class="figure-wrapper">
+            <img src="images/8-desktop.jpg" alt="DSGN" class='pic'>
+          </figure>
+        </div>
+      </article>
+
+      <article class="project">
+        <div>
+          <h3>CAHEE</h3>
+          <p>
+            Witryna firmy żywieniowej, wykonana w ramach akcji weekly webdev challenge. Stronę wykonałem za
+            pomocą
+            HTML5, CSS3 i JavaScript.
+          </p>
+          <div class="icons">
+            <a href="https://weekly-webdev-challenge-2.herokuapp.com/" target='_blank'><i class="fas fa-eye"></i></a>
+            <a href="https://github.com/MichalIrzylowski/weekly_webdev_challenge_2" target='_blank'><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div>
+          <figure class="figure-wrapper">
+            <img src="images/2.jpg" alt="CAHEE" class='pic'>
+          </figure>
+        </div>
+      </article>
+
+      <article class="project">
+        <div>
+          <h3>Swag-Pictures</h3>
+          <p>
+            Klon instagrama. Aplikacja internetowa posiadająca większość funkcjonalności instagrama. Do zbudwoania
+            front-endu użyłem: React.js, CSS3, HTML5 i kilka innych mniejszych bibliotek JS. Back-end zbudowałem za
+            pomocą Node.js z wykorzystaniem frameworka Express.js, baza danych - MongoDB.
+          </p>
+          <div class="icons">
+            <a href="http://swag-pictures.herokuapp.com/" target='_blank'><i class="fas fa-eye"></i></a>
+            <a href="https://github.com/MichalIrzylowski/swag-pictures" target='_blank'><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div>
+          <figure class="figure-wrapper">
+            <img src="images/swag_pictures.png" alt="CAHEE" class='pic'>
+          </figure>
+        </div>
+      </article>
+    </section>
+
+  </main>
+  <footer>
+    <div class='trigerContactForm'>Chcesz stronę?</div>
+  </footer>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
