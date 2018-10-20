@@ -6,143 +6,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|PT+Serif:400,700&amp;subset=latin-ext" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="message">Dziękuję za wiadomość!</div>
-  <div class="burger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <nav class='main-menu'>
-    <ul>
-      <li class="menu-choise">O mnie</li>
-      <li class="menu-choise">Projekty</li>
-      <li class="menu-choise">Kontakt</li>
-    </ul>
-  </nav>
-  <div class="contactform">
-    <i class="fas fa-times" id='quitForm' style="color: #fff; position: absolute; top: 20px; right: 50px; font-size: 24px; cursor: pointer"></i>
-    <div class="container">
-      <form action="" method="post" class='contact_form'>
-        <h2 class="contact_form-title">Napisz do mnie!</h2>
-        <div class="input_wrapper">
-          <div class="input_wrapper-field">
-            <input type='text' name='name' id='name' class="contact_form-input" required="required" />
-            <label for="name" class="contact_form-label">Imię:</label>
-          </div>
-          <div class="input_wrapper-field">
-            <input type='email' name='email' id='email' class="contact_form-input" required="required" />
-            <label for="email" class="contact_form-label">E-mail:</label>
-          </div>
-        </div>
-        <div class="input_wrapper-field">
-          <textarea name="message" id="message" cols="30" rows="10" required="required"></textarea>
-          <label for="message" class="contact_form-label">Wiadomość:</label>
-        </div>
-        <button type="submit">Wyślij!</button>
-      </form>
-    </div>
-  </div>
-  <span class="logo">&lt;MI /&gt;</span>
-  <header class="hero">
-    <div class="container">
-      <div class="hero__content">
-        <figure>
-          <img src='images/ja.png' />
-          <figcaption>
+  <div class="container">
 
-          </figcaption>
-        </figure>
-        <article>
-          <p>
-            <b>Cześć!</b>
-          </p>
-          <p>
-            Mam na imię Michał i tworzę strony internetowe. Z wykształcenia jestem chemikiem i na codzień pracuję jako
-            chemik analityk w jednej z najszybciej rozwijających się firm biotechnologicznych w Polsce.
-          </p>
-          <p>
-            Programuję w React.js, Redux.js, React-Router, Node.js, ES6, CSS3 i HTML5. Poniżej możesz zobaczyć
-            projekty, które wykonałem!
-        </article>
+    <header>
+      <h1>Michal Irzylowski</h1>
+    </header>
+
+    <main>
+      <div class="header">
+        Cześć! <br />
+        Mam na imię Michał i <br />
+        <span class='typer'></span><span class='cursor'>|</span> <br />
+        Zajmuję się tworzeniem i wdrażaniem stron i aplikacji internetowych, wszystkich, od małych stron wizytókowych
+        do skomplikowanych aplikacji typu <em>Instagram</em>.
       </div>
-    </div>
-  </header>
+      <div>
+        Pasjonuję się tworzeniem programowaniem webowym. Do każdego zadania podchodzę na nowo i w porównaniu do
+        innych
+        nie korzystam z gotowych rozwiązań. Wszystkie strony czy aplikacje internetowe przygotowuję z podejściem
+        <em>responsive web design</em> (czyli tak aby dobrze wyglądały na komputerach, tabletach, telefonach i innych
+        urządzeniach pozwalających wyświetlać strony internetowe), stosuję najnowsze technologie.
+      </div>
 
-  <main class="container">
-    <section class="projects">
-      <h2 class="title">Projekty</h2>
-      <article class="project">
-        <div>
-          <h3>DSGN</h3>
-          <p>
-            Strona reklamowa, wykonana w ramach akcji weekly webdev challenge. Stronę wykonałem za pomocą HTML5,
-            CSS3 i JavaScript.
-          </p>
-          <div class="icons">
-            <a href="http://weekly-webdev-challenge-8.herokuapp.com/" target='_blank'><i class="fas fa-eye"></i></a>
-            <a href="https://github.com/MichalIrzylowski/weekly-webdev-challenge-8" target='_blank'><i class="fab fa-github"></i></a>
+      <div>
+        <h2>Czym działam?</h2>
+        <div class='technologies'>
+          <img class="logo" src="https://cdn.svgporn.com/logos/react.svg" alt="react" title='React.js'>
+          <img class="logo" src="https://cdn.svgporn.com/logos/redux.svg" alt="redux" title='Redux.js'>
+          <img class="logo" src="https://cdn.svgporn.com/logos/nodejs-icon.svg" alt="node" title='Node.js'>
+          <img class="logo" src="https://cdn.svgporn.com/logos/es6.svg" alt="es6" title='ES6'>
+        </div>
+      </div>
+
+      <div>
+        <h2>Co zrobiłem?</h2>
+        <article>
+          <img class='m300' src="ZEST_300.png" alt="ZEST">
+          <img class='m350' src="ZEST_350.png" alt="ZEST">
+          <img class='m400' src="ZEST_400.png" alt="ZEST">
+          <img class="m500" src="ZEST_500.png" alt="ZEST">
+          <img class="desktop" src="ZEST.png" alt="ZEST">
+          <div>
+            <span class='belt top'></span>
+            <span class='belt bottom'></span>
+            <span class='belt left'></span>
+            <span class='belt right'></span>
+            <p>Najnowsze dzieło. Do zrobienia tej strony użyłem HTML5, CSS3 i JS. Zachowane standardy RWD. Projekt
+              znaleziony <a href='https://drive.google.com/drive/folders/0Bw2hu70L5Ye_VkhvdDZhN3haSlE'>tutaj</a>.</p>
+            <a class='live' href="https://michalirzylowski.github.io/weekly-webdev-challenge-12/">Live</a>
           </div>
-        </div>
-        <div>
-          <figure class="figure-wrapper">
-            <img src="images/8-desktop.jpg" alt="DSGN" class='pic'>
-          </figure>
-        </div>
-      </article>
-
-      <article class="project">
-        <div>
-          <h3>CAHEE</h3>
-          <p>
-            Witryna firmy żywieniowej, wykonana w ramach akcji weekly webdev challenge. Stronę wykonałem za
-            pomocą
-            HTML5, CSS3 i JavaScript.
-          </p>
-          <div class="icons">
-            <a href="https://weekly-webdev-challenge-2.herokuapp.com/" target='_blank'><i class="fas fa-eye"></i></a>
-            <a href="https://github.com/MichalIrzylowski/weekly_webdev_challenge_2" target='_blank'><i class="fab fa-github"></i></a>
+        </article>
+        <article>
+          <img class='m300' src="swag-pictures_300.png" alt="swag-pictures">
+          <img class='m350' src="swag-pictures_350.png" alt="swag-pictures">
+          <img class='m400' src="swag-pictures_400.png" alt="swag-pictures">
+          <img class='m500' src="swag-pictures_500.png" alt="swag-pictures">
+          <img class='desktop' src="swag-pictures.png" alt="swag-pictures">
+          <div>
+            <span class='belt top'></span>
+            <span class='belt bottom'></span>
+            <span class='belt left'></span>
+            <span class='belt right'></span>
+            <p>Własny projekt. Kopia <em>Instagrama</em>, do zbudowania użyłem React.js, Redux.js, Redux-saga,
+              Bootstrap v4. Back-end zbudowany w Node.js</p>
+            <a class='live' href="http://swag-pictures.herokuapp.com/">Live</a>
           </div>
-        </div>
-        <div>
-          <figure class="figure-wrapper">
-            <img src="images/2.jpg" alt="CAHEE" class='pic'>
-          </figure>
-        </div>
-      </article>
-
-      <article class="project">
-        <div>
-          <h3>Swag-Pictures</h3>
-          <p>
-            Klon instagrama. Aplikacja internetowa posiadająca większość funkcjonalności instagrama. Do zbudwoania
-            front-endu użyłem: React.js, CSS3, HTML5 i kilka innych mniejszych bibliotek JS. Back-end zbudowałem za
-            pomocą Node.js z wykorzystaniem frameworka Express.js, baza danych - MongoDB.
-          </p>
-          <div class="icons">
-            <a href="http://swag-pictures.herokuapp.com/" target='_blank'><i class="fas fa-eye"></i></a>
-            <a href="https://github.com/MichalIrzylowski/swag-pictures" target='_blank'><i class="fab fa-github"></i></a>
+        </article>
+        <article>
+          <img class='m300' src="DSGN_300.png" alt="DSGN">
+          <img class='m350' src="DSGN_350.png" alt="DSGN">
+          <img class='m400' src="DSGN_400.png" alt="DSGN">
+          <img class='m500' src="DSGN_500.png" alt="DSGN">
+          <img class="desktop" src="DSGN.png" alt="DSGN">
+          <div>
+            <span class='belt top'></span>
+            <span class='belt bottom'></span>
+            <span class='belt left'></span>
+            <span class='belt right'></span>
+            <p>Strona agencji reklamowej. Do zrobienia tej strony użyłem HTML5, CSS3 i JS. Zachowane standardy RWD.
+              Projekt
+              znaleziony <a href='https://drive.google.com/drive/folders/0Bw2hu70L5Ye_VkhvdDZhN3haSlE'>tutaj</a>.</p>
+            <a class='live' href="http://weekly-webdev-challenge-8.herokuapp.com/">Live</a>
           </div>
-        </div>
+        </article>
         <div>
-          <figure class="figure-wrapper">
-            <img src="images/swag_pictures.png" alt="CAHEE" class='pic'>
-          </figure>
+          Więcej projektów: <a href=""><i class="fab fa-github"></i></a>
         </div>
-      </article>
-    </section>
+      </div>
+    </main>
 
-  </main>
-  <footer>
-    <div class='trigerContactForm'>Chcesz stronę?</div>
-  </footer>
+    <footer>
+      <h2>Kontakt:</h2>
+      Wyślij mi wiadomość na <a href="mailto:michal.irzylowski@gmail.com">michal.irzylowski@gmail.com</a>!
+    </footer>
 
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </div>
   <script src="app.js"></script>
 </body>
 

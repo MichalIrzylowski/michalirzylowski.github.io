@@ -1,101 +1,161 @@
-const pic = document.getElementsByClassName("pic");
-const figure = document.getElementsByClassName("figure-wrapper");
-const burger = document.querySelector(".burger");
-const mainMenu = document.querySelector(".main-menu");
-const contactForm = document.querySelector(".contactform");
-const menuChoise = document.getElementsByClassName("menu-choise");
-const trigerContactForm = document.querySelector(".trigerContactForm");
-const logo = document.querySelector(".logo");
-const quitForm = document.getElementById("quitForm");
-const thanksMessage = document.querySelector(".message");
+const typer = document.querySelector(".typer");
+const title = document.querySelector("h1");
+const logosContainer = document.querySelector(".technologies");
+const logos = document.querySelectorAll(".logo");
 
-const movePoints = [
-  document.getElementsByClassName("hero")[0],
-  document.getElementsByClassName("projects")[0],
-  document.querySelector("footer")
+// === NEON STYLE HEADER === //
+{
+  const mappedTitle = title.innerText.split("").map((letter, i) => {
+    const span = document.createElement("span");
+    span.innerText = letter;
+    span.classList.add(`letter`);
+    span.id = `letter-${i}`;
+    return span;
+  });
+  title.innerText = "";
+  for (let i = 0; i < mappedTitle.length; i++) {
+    title.appendChild(mappedTitle[i]);
+  }
+
+  let randomLetter = Math.floor(Math.random() * mappedTitle.length);
+  let times = Math.floor(Math.random() * (100 - 10) + 10);
+  if (times % 2 !== 0) {
+    times++;
+  }
+  let iterated = 0;
+
+  const flick = () => {
+    setTimeout(() => {
+      mappedTitle[randomLetter].classList.toggle("off");
+      iterated++;
+      if (iterated === times) {
+        randomLetter = Math.floor(Math.random() * mappedTitle.length);
+        times = Math.floor(Math.random() * (100 - 10) + 10);
+        if (times % 2 !== 0) {
+          times++;
+        }
+        iterated = 0;
+        return;
+      }
+      flick();
+    }, 10);
+  };
+
+  const flickerLight = setInterval(flick, 2000);
+}
+
+// === TYPER === //
+const texts = [
+  "jestem front-end deweloperem!",
+  "jestem back-end deweloperem!",
+  "jestem full-stack deweloperem!",
+  "tworzę aplikacje mobilne!",
+  "jestem profesjonalny!",
+  "posługuję się wieloma technologiami!",
+  "życzę Ci miłego dnia!",
+  "tworzę magię!"
 ];
 
-let minusFactors = Array(figure.length);
+const mappedTexts = texts.map(text => {
+  return text.split("").map((letter, i) => {
+    let span = document.createElement("span");
+    span.classList.add(`letter-${i}`);
+    span.innerText = letter;
+    return span;
+  });
+});
 
-const setTranslate = (x = 0, y, element) => {
-  element.style.transform = `translate3d(${x}px, ${y}px, 0px)`;
+let letterNumber = 0;
+let wordNumber = 0;
+
+const erase = () => {
+  setTimeout(() => {
+    typer.removeChild(mappedTexts[wordNumber][letterNumber - 1]);
+    letterNumber--;
+    if (letterNumber === 0) {
+      wordNumber++;
+
+      setTimeout(() => {
+        type();
+      }, 1000);
+
+      if (wordNumber === mappedTexts.length) {
+        wordNumber = 0;
+      }
+      return;
+    }
+    erase();
+  }, 50);
 };
 
-// === LISTENERS ARE HERE === //
+const type = () => {
+  setTimeout(() => {
+    typer.appendChild(mappedTexts[wordNumber][letterNumber]);
 
-if (window.innerWidth > 768) {
-  document.addEventListener("scroll", paralaxElements);
-}
+    letterNumber++;
 
-document.addEventListener("scroll", () => {
-  if (
-    trigerContactForm.getBoundingClientRect().top + 300 <
-    window.innerHeight
-  ) {
-    trigerContactForm.style.opacity = 1;
-  }
-});
-
-trigerContactForm.addEventListener("click", function(e) {
-  e.preventDefault();
-  contactForm.classList.toggle("active");
-  logo.classList.toggle("active");
-});
-
-contactForm.addEventListener("submit", async function(e) {
-  e.preventDefault();
-  const name = document.getElementById("name").value,
-    email = document.getElementById("email").value,
-    message = document.getElementById("message").value;
-  const messageFields = { name, email, message };
-
-  let answer = await axios.post(
-    "https://portfolio-mirzylowski-server.herokuapp.com/api/message",
-    messageFields
-  );
-  console.log(answer);
-  if (answer.status === 200) {
-    thanksMessage.classList.toggle("active");
-    setTimeout(() => {
-      thanksMessage.classList.toggle("active");
-    }, 2000);
-  }
-  contactForm.classList.toggle("active");
-  logo.classList.toggle("active");
-});
-
-quitForm.addEventListener("click", () => {
-  contactForm.classList.toggle("active");
-  logo.classList.toggle("active");
-});
-
-burger.addEventListener("click", function() {
-  this.classList.toggle("active");
-  mainMenu.classList.toggle("active");
-  logo.classList.toggle("active");
-});
-
-for (let i = 0; i < menuChoise.length; i++) {
-  menuChoise[i].addEventListener("click", () => {
-    movePoints[i].scrollIntoView({ behavior: "smooth", block: "start" });
-    burger.classList.toggle("active");
-    mainMenu.classList.toggle("active");
-    logo.classList.toggle("active");
-  });
-}
-
-function paralaxElements() {
-  for (let i = 0; i < pic.length; i++) {
-    if (
-      figure[i].getBoundingClientRect().top < window.innerHeight &&
-      figure[i].getBoundingClientRect().bottom > 0
-    ) {
-      if (!minusFactors[i]) {
-        minusFactors[i] = Math.round((window.scrollY * 0.1) / 10) * 10;
-      }
-
-      setTranslate(0, -(window.scrollY * 0.1 - minusFactors[i]), figure[i]);
-      setTranslate(0, -(window.scrollY * 0.1 - minusFactors[i]) / 4, pic[i]);
+    if (letterNumber === mappedTexts[wordNumber].length) {
+      setTimeout(() => {
+        erase();
+      }, 2000);
+      return;
     }
-  }
-}
+
+    type();
+  }, 100);
+};
+
+const addLetters = setTimeout(type, 1000);
+
+// === LOGOS RANDOM CARUSEL === //
+// {
+//   const logosSrc = [
+//     {
+//       src: "https://cdn.svgporn.com/logos/react.svg",
+//       alt: "react",
+//       title: "React.js"
+//     },
+//     {
+//       src: "https://cdn.svgporn.com/logos/redux.svg",
+//       alt: "redux",
+//       title: "Redux.js"
+//     },
+//     {
+//       src: "https://cdn.svgporn.com/logos/nodejs-icon.svg",
+//       alt: "node",
+//       title: "Node.js"
+//     },
+//     { src: "https://cdn.svgporn.com/logos/es6.svg", alt: "es6", title: "ES6" },
+//     {
+//       src: "https://cdn.svgporn.com/logos/css-3.svg",
+//       alt: "CSS3",
+//       title: "CSS3"
+//     },
+//     {
+//       src: "https://cdn.svgporn.com/logos/html-5.svg",
+//       alt: "html5",
+//       title: "HTML5"
+//     },
+//     {
+//       src: "https://cdn.svgporn.com/logos/react-router.svg",
+//       alt: "react-router",
+//       title: "React-Router"
+//     }
+//   ];
+//   let srcNumber = Math.floor(Math.random() * logosSrc.length);
+//   let logo = Math.floor(Math.random() * logos.length);
+//   setInterval(() => {
+//     if (
+//       ![...logos].find(logo => {
+//         return logosSrc[srcNumber].src === logo.src;
+//       })
+//     ) {
+//       console.log(true);
+//       logos[logo].src = logosSrc[srcNumber].src;
+//       logos[logo].alt = logosSrc[srcNumber].alt;
+//       logos[logo].title = logosSrc[srcNumber].title;
+//       srcNumber = Math.floor(Math.random() * logosSrc.length);
+//       logo = Math.floor(Math.random() * logos.length);
+//     }
+//   }, 5000);
+// }
