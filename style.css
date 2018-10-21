@@ -17,14 +17,12 @@ body {
 h1 {
   font-family: "Nixie One", cursive;
   color: #f1f758;
-  font-size: 1.7em;
-  text-align: center;
+  font-size: 2.2em;
 }
 
 h2 {
   margin-top: 1.2em;
-  font-size: 1.5em;
-  padding-left: 5px;
+  font-size: 1.7em;
 }
 
 header {
@@ -86,11 +84,10 @@ article {
   margin: 2em 0;
   line-height: 2em;
   font-size: 0.8em;
-  padding: 0 5px;
 }
 
 .header {
-  font-size: 0.8em;
+  font-size: 1em;
   transform: rotate(3deg);
   margin: 0 auto;
   width: 280px;
@@ -219,16 +216,15 @@ article:hover .belt.right {
 }
 
 article:hover .live {
-  transform: translateY(-50%);
+  transform: translateY(-100%);
 }
 @media screen and (min-width: 320px) {
   article > div {
     padding: 20px;
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
 
   article p {
-    font-size: 0.6em;
     line-height: 1.8em;
   }
 }
@@ -240,7 +236,7 @@ article:hover .live {
 
   .header {
     margin: 0;
-    font-size: 1em;
+    font-size: 1.1em;
     width: 100%;
     margin: 2em 0;
   }
@@ -259,23 +255,40 @@ article:hover .live {
   article p {
     font-size: 0.7em;
   }
+
+  .container {
+    max-width: 350px;
+  }
+
+  .m300 {
+    display: none;
+  }
+
+  .m350 {
+    display: inline;
+  }
+
+  article:hover .live {
+    transform: translateY(-45%);
+  }
 }
 
 @media screen and (min-width: 450px) {
   h1 {
-    font-size: 2.1em;
+    font-size: 2em;
+    line-height: 1.5em;
   }
 
   h2 {
     padding: 0;
   }
 
-  .header {
+  div {
     font-size: 1em;
   }
 
-  .container {
-    max-width: 350px;
+  .header {
+    font-size: 1em;
   }
 
   .technologies,
@@ -287,12 +300,13 @@ article:hover .live {
     font-size: 0.9em;
   }
 
-  .m300 {
-    display: none;
+  article > div {
+    font-size: 0.9em;
   }
 
-  .m350 {
-    display: inline;
+  div,
+  article {
+    padding: 0;
   }
 }
 
@@ -301,12 +315,19 @@ article:hover .live {
     font-size: 2.2em;
   }
 
+  div {
+    font-size: 0.9em;
+  }
   .header {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
   .container {
     max-width: 400px;
+  }
+
+  article > div {
+    font-size: 0.9em;
   }
 
   .technologies,
@@ -329,7 +350,11 @@ article:hover .live {
   }
 
   .header {
-    font-size: 1.3em;
+    font-size: 1em;
+  }
+
+  div {
+    font-size: 0.9em;
   }
 
   .container {
@@ -342,6 +367,7 @@ article:hover .live {
   }
 
   article > div {
+    font-size: 0.8em;
     padding: 50px;
   }
 
@@ -376,11 +402,15 @@ article:hover .live {
   }
 
   h2 {
-    font-size: 2.6111em;
+    font-size: 2em;
   }
 
   .header {
-    font-size: 1.7em;
+    font-size: 1.2em;
+  }
+
+  div {
+    font-size: 1em;
   }
 
   .container {
@@ -443,6 +473,7 @@ article:hover .live {
   }
 
   article > div {
+    font-size: 0.8em;
     padding: 70px;
   }
 
