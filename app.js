@@ -49,9 +49,9 @@ const texts = [
   "jestem front-end deweloperem!",
   "jestem back-end deweloperem!",
   "jestem full-stack deweloperem!",
-  "tworzę aplikacje mobilne!",
   "jestem profesjonalny!",
   "posługuję się wieloma technologiami!",
+  "tworzę progresywne aplikacje webowe!",
   "życzę Ci miłego dnia!",
   "tworzę magię!"
 ];
