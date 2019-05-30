@@ -52,8 +52,8 @@ const texts = [
   "jestem profesjonalny!",
   "posługuję się wieloma technologiami!",
   "tworzę progresywne aplikacje webowe!",
-  "życzę Ci miłego dnia!",
-  "tworzę magię!"
+  "tworzę magię!",
+  "życzę Ci miłego dnia!"
 ];
 
 const mappedTexts = texts.map(text => {
