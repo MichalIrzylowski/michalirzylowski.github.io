@@ -1,3 +1,5 @@
-import React from "react";
+import React from 'react';
 
-export const App = () => <h1>hello world</h1>;
+import css from './styles/variables.module.scss';
+
+export const App = () => <h1 className={css.header}>hello world</h1>;
