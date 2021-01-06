@@ -1,11 +1,19 @@
-import React from "react";
-import { hydrate } from "react-dom";
+import React from 'react';
+import { hydrate } from 'react-dom';
 
-import { App } from "./app";
+import Typography from 'typography';
+import theme from 'typography-theme-fairy-gates';
 
-hydrate(<App />, document.getElementById("app"));
+import { App } from './app';
+
+import './styles/global.scss';
+
+hydrate(<App />, document.getElementById('app'));
+
+const typography = new Typography(theme);
+typography.injectStyles();
 
 if (module.hot) {
     module.hot.accept();
-    console.log("HMR enabled");
+    console.log('HMR enabled');
 }
