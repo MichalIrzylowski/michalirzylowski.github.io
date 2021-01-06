@@ -1,5 +1,10 @@
 import React from 'react';
 
-import css from './styles/variables.module.scss';
+import { AnimatedSlogans } from '@components/animated-slogans';
 
-export const App = () => <h1 className={css.header}>hello world</h1>;
+export const App = () => (
+    <main>
+        <h1>Michał Irzyłowski</h1>
+        <AnimatedSlogans />
+    </main>
+);

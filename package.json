@@ -24,6 +24,7 @@
         "gh-pages": "^3.1.0",
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
+        "react-spring": "^8.0.27",
         "typography": "^0.16.19"
     },
     "devDependencies": {
@@ -37,6 +38,7 @@
         "sass-loader": "^10.1.0",
         "style-loader": "^2.0.0",
         "ts-loader": "^8.0.12",
+        "tsconfig-paths-webpack-plugin": "^3.3.0",
         "typescript": "^4.1.3",
         "typescript-plugin-css-modules": "^3.0.1",
         "typography-theme-fairy-gates": "^0.16.19",
