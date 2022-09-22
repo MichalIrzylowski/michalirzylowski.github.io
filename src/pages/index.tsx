@@ -1,5 +1,5 @@
 import React from "react";
-import type { HeadFC } from "gatsby";
+import { HeadFC, useStaticQuery, StaticQuery, graphql } from "gatsby";
 
 import GlobalStyles from "../styles/global";
 
@@ -19,9 +19,23 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => (
-    <>
-        <title>Michal Irzylowski</title>
-        <GlobalStyles />
-    </>
-);
+export const Head: HeadFC = () => {
+    const title = useStaticQuery<Queries.HeadQuery>(query);
+
+    return (
+        <>
+            <title>{title.site?.siteMetadata?.title}</title>
+            <GlobalStyles />
+        </>
+    );
+};
+
+export const query = graphql`
+    query Head {
+        site {
+            siteMetadata {
+                title
+            }
+        }
+    }
+`;

@@ -3,7 +3,7 @@ import React, { FC } from "react";
 import * as S from "./styled";
 import { ProgressProps } from "./types";
 
-const Progress: FC<ProgressProps> = ({ max, value, label, scale }) => (
+const Progress: FC<ProgressProps> = ({ max = 100, value, label, scale }) => (
     <>
         <S.Label htmlFor={label}>{label}</S.Label>
         {scale && (

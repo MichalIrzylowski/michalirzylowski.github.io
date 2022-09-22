@@ -1,4 +1,6 @@
 import React, { FC } from "react";
+import { MDXProvider } from "@mdx-js/react";
+
 import { TimelineItemProps } from "./types";
 
 import * as S from "./styled";

@@ -1,5 +1,5 @@
 export interface ProgressProps {
-    max: number;
+    max?: number;
     value: number;
     label: string;
     scale?: string[];

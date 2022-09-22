@@ -4,7 +4,3 @@ export interface TimelineItemProps {
     position: string;
     description: string;
 }
-
-export interface TimelineProps {
-    items: TimelineItemProps[];
-}

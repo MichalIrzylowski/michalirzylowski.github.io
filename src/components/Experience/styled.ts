@@ -29,7 +29,7 @@ export const Role = styled.h5`
 `;
 
 export const Wrapper = styled.div`
-    flex: 50%;
+    max-width: 50%;
 `;
 
 const line = css`
@@ -98,10 +98,6 @@ export const TimelineItemWrapper = styled.div`
         justify-content: flex-end;
 
         ${evenDotPosition}
-
-        ${Period}, ${CompanyName}, ${Role} {
-            text-align: right;
-        }
 
         ::after {
             ${line}
