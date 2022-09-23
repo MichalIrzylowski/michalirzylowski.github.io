@@ -25,12 +25,16 @@ const IndexPage = () => {
             (imgProperties.height * pdfWidth) / imgProperties.width;
 
         pdf.addImage(data, "PNG", 0, 0, pdfWidth, pdfHeight);
-        pdf.save("print.pdf");
+        pdf.save("michal-irzylowski-cv.pdf");
     };
 
     return (
         <>
-            <button onClick={handleDownloadCv}>download cv</button>
+            <S.DownlaodCvButtonWrapper>
+                <S.DownlaodCvButton onClick={handleDownloadCv}>
+                    Download CV!
+                </S.DownlaodCvButton>
+            </S.DownlaodCvButtonWrapper>
             <S.Paper ref={ref}>
                 <Top />
                 <Body />
