@@ -4,8 +4,8 @@ import * as S from "./styled";
 import { ProgressProps } from "./types";
 
 const Progress: FC<ProgressProps> = ({ max = 100, value, label, scale }) => (
-    <>
-        <S.Label htmlFor={label}>{label}</S.Label>
+    <S.Wrapper>
+        <S.Label>{label}</S.Label>
         {scale && (
             <S.Scale>
                 {scale.map((scaleElement) => (
@@ -15,8 +15,10 @@ const Progress: FC<ProgressProps> = ({ max = 100, value, label, scale }) => (
                 ))}
             </S.Scale>
         )}
-        <S.Progress id={label} max={max} value={value} />
-    </>
+        <S.ProgressWrapper>
+            <S.ProgressValue style={{ width: `${(value / max) * 100}%` }} />
+        </S.ProgressWrapper>
+    </S.Wrapper>
 );
 
 export default Progress;
