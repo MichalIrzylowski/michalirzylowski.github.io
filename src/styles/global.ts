@@ -10,8 +10,12 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        padding: 30px 90px;
         background-color: #f9f9f9;
+        padding: 10px;
+
+        @media screen and (min-width: 1024px) {
+            padding: 30px 90px;
+        }
     }
 `;
 

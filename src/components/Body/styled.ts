@@ -1,12 +1,17 @@
 import styled, { css } from "styled-components";
 
 export const Body = styled.article`
-    display: grid;
-    grid-template-columns: 3fr 7fr;
-    grid-template-rows: auto;
-    grid-template-areas: "simple elaborated";
-    grid-gap: 60px;
     margin-top: 30px;
+    display: flex;
+    flex-direction: column-reverse;
+
+    @media screen and (min-width: 1024px) {
+        display: grid;
+        grid-template-columns: 3fr 7fr;
+        grid-template-rows: auto;
+        grid-template-areas: "simple elaborated";
+        grid-gap: 60px;
+    }
 `;
 
 const bottomDistance = css`

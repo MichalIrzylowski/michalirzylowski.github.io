@@ -29,7 +29,9 @@ export const Role = styled.h5`
 `;
 
 export const Wrapper = styled.div`
-    max-width: 50%;
+    @media screen and (min-width: 1024px) {
+        max-width: 50%;
+    }
 `;
 
 const line = css`
