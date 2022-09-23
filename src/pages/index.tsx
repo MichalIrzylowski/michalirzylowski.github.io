@@ -1,5 +1,7 @@
-import React from "react";
-import { HeadFC, useStaticQuery, StaticQuery, graphql } from "gatsby";
+import React, { useRef } from "react";
+import { HeadFC, useStaticQuery, graphql } from "gatsby";
+import html2canvas from "html2canvas";
+import { jsPDF } from "jspdf";
 
 import GlobalStyles from "../styles/global";
 
@@ -9,11 +11,31 @@ import Body from "../components/Body";
 import * as S from "./styles";
 
 const IndexPage = () => {
+    const ref = useRef<HTMLElement | null>(null);
+
+    const handleDownloadCv = async () => {
+        const element = ref.current;
+        const canvas = await html2canvas(element as HTMLElement);
+        const data = canvas.toDataURL("image/png");
+
+        const pdf = new jsPDF();
+        const imgProperties = pdf.getImageProperties(data);
+        const pdfWidth = pdf.internal.pageSize.getWidth();
+        const pdfHeight =
+            (imgProperties.height * pdfWidth) / imgProperties.width;
+
+        pdf.addImage(data, "PNG", 0, 0, pdfWidth, pdfHeight);
+        pdf.save("print.pdf");
+    };
+
     return (
-        <S.Paper>
-            <Top />
-            <Body />
-        </S.Paper>
+        <>
+            <button onClick={handleDownloadCv}>download cv</button>
+            <S.Paper ref={ref}>
+                <Top />
+                <Body />
+            </S.Paper>
+        </>
     );
 };
 
