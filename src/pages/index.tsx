@@ -8,7 +8,7 @@ import GlobalStyles from "../styles/global";
 import Top from "../components/Top";
 import Body from "../components/Body";
 
-import * as S from "./styles";
+import * as S from "../page-styles/index/styles";
 
 const IndexPage = () => {
     const ref = useRef<HTMLElement | null>(null);
