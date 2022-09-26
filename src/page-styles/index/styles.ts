@@ -9,6 +9,8 @@ export const Paper = styled.main`
 
     @media screen and (min-width: 1024px) {
         padding: 60px;
+        max-width: 1172px;
+        margin: 0 auto;
     }
 `;
 
