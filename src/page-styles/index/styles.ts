@@ -12,10 +12,21 @@ export const Paper = styled.main`
         max-width: 1172px;
         margin: 0 auto;
     }
+
+    @media print {
+        padding: 0;
+        max-width: unset;
+        margin: 0;
+        box-shadow: none;
+    }
 `;
 
 export const DownlaodCvButtonWrapper = styled.div`
     @media screen and (max-width: 1024px) {
+        display: none;
+    }
+
+    @media print {
         display: none;
     }
 

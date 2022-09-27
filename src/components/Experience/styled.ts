@@ -32,6 +32,10 @@ export const Wrapper = styled.div`
     @media screen and (min-width: 1024px) {
         max-width: 50%;
     }
+
+    @media print {
+        max-width: unset;
+    }
 `;
 
 const line = css`

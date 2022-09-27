@@ -12,6 +12,14 @@ export const Body = styled.article`
         grid-template-areas: "simple elaborated";
         grid-gap: 60px;
     }
+
+    @media print {
+        display: grid;
+        grid-template-columns: 3fr 7fr;
+        grid-template-rows: auto;
+        grid-template-areas: "simple elaborated";
+        grid-gap: 60px;
+    }
 `;
 
 const bottomDistance = css`

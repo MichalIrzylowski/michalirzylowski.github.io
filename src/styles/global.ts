@@ -16,6 +16,10 @@ const GlobalStyles = createGlobalStyle`
         @media screen and (min-width: 1024px) {
             padding: 30px 90px;
         }
+
+        @media print {
+            padding: 0;
+        }
     }
 `;
 

@@ -6,6 +6,14 @@ export const Header = styled.header`
 
     @media screen and (min-width: 768px) {
         display: grid;
+        grid-template-columns: 3fr 7fr;
+        grid-template-areas: "picture details";
+        grid-gap: 60px;
+        padding-bottom: 20px;
+    }
+
+    @media print {
+        display: grid;
         grid-template-columns: 1fr 2fr;
         grid-template-areas: "picture details";
         grid-gap: 60px;
@@ -37,6 +45,10 @@ export const Name = styled.h1`
     @media screen and (min-width: 1024px) {
         font-size: 72px;
     }
+
+    @media print {
+        font-size: px;
+    }
 `;
 
 export const Role = styled.h2`
@@ -47,5 +59,9 @@ export const Role = styled.h2`
 
     @media screen and (min-width: 1024px) {
         font-size: 48px;
+    }
+
+    @media print {
+        font-size: 22px;
     }
 `;
