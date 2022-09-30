@@ -14,10 +14,9 @@ export const Header = styled.header`
 
     @media print {
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 3fr 7fr;
         grid-template-areas: "picture details";
         grid-gap: 60px;
-        padding-bottom: 20px;
     }
 `;
 
@@ -47,7 +46,7 @@ export const Name = styled.h1`
     }
 
     @media print {
-        font-size: px;
+        font-size: 48px;
     }
 `;
 

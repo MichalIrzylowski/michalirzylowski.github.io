@@ -1,5 +1,13 @@
+import { GatsbyNode } from "gatsby";
+
 import { generateCv } from "./generate-cv";
 
-export const onPostBuild = async () => {
-    await generateCv();
+export const onCreatePage: GatsbyNode["onCreatePage"] = async ({
+    page,
+    actions,
+}) => {
+    if (page.path.match(/^\/cv/)) {
+        await generateCv();
+        actions.deletePage(page);
+    }
 };
