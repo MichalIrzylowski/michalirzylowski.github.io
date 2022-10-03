@@ -30,10 +30,18 @@ export const ProgressWrapper = styled.div`
     border-radius: 5px;
     overflow: hidden;
     height: 10px;
+
+    @media print {
+        border: 1px solid ${colors.grey};
+    }
 `;
 
 export const ProgressValue = styled.div`
     background-color: ${colors.blue};
     border-radius: 5px;
     height: 100%;
+
+    @media print {
+        border: 4px solid ${colors.blue};
+    }
 `;

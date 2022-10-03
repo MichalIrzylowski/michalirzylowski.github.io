@@ -13,26 +13,11 @@ import * as S from "../page-styles/index/styles";
 const IndexPage = () => {
     const ref = useRef<HTMLElement | null>(null);
 
-    const handleDownloadCv = async () => {
-        const element = ref.current;
-        const canvas = await html2canvas(element as HTMLElement);
-        const data = canvas.toDataURL("image/png");
-
-        const pdf = new jsPDF();
-        const imgProperties = pdf.getImageProperties(data);
-        const pdfWidth = pdf.internal.pageSize.getWidth();
-        const pdfHeight =
-            (imgProperties.height * pdfWidth) / imgProperties.width;
-
-        pdf.addImage(data, "PNG", 0, 0, pdfWidth, pdfHeight);
-        pdf.save("michal-irzylowski-cv.pdf");
-    };
-
     return (
         <>
             <S.DownlaodCvButtonWrapper>
-                <S.DownlaodCvButton onClick={handleDownloadCv}>
-                    Download CV!
+                <S.DownlaodCvButton onClick={window.print}>
+                    Get CV!
                 </S.DownlaodCvButton>
             </S.DownlaodCvButtonWrapper>
             <S.Paper ref={ref}>

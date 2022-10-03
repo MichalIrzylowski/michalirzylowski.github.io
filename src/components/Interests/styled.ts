@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { Gear } from "@styled-icons/bootstrap/Gear";
 import { Atom } from "@styled-icons/boxicons-regular/Atom";
@@ -29,18 +29,27 @@ export const ImageBackground = styled.div`
     margin-right: 10px;
 `;
 
-export const GearIcon = styled(Gear)`
+const iconStyles = css`
     color: ${colors.white};
+
+    @media print {
+        color: ${colors.blue};
+        print-color-adjust: exact;
+    }
+`;
+
+export const GearIcon = styled(Gear)`
+    ${iconStyles}
 `;
 
 export const AtomIcon = styled(Atom)`
-    color: ${colors.white};
+    ${iconStyles}
 `;
 
 export const GameIcon = styled(Game)`
-    color: ${colors.white};
+    ${iconStyles}
 `;
 
 export const WebIcon = styled(Web)`
-    color: ${colors.white};
+    ${iconStyles}
 `;

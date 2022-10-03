@@ -29,6 +29,10 @@ export const MyPicture = styled.img`
         max-width: 500px;
         margin: 30px auto 0;
     }
+
+    @media print {
+        print-color-adjust: exact;
+    }
 `;
 
 export const Headings = styled.div`

@@ -19,6 +19,7 @@ const GlobalStyles = createGlobalStyle`
 
         @media print {
             padding: 0;
+            print-color-adjust: exact;
         }
     }
 `;

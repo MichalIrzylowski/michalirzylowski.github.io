@@ -81,6 +81,10 @@ export const TimelineItemWrapper = styled.div`
             border-left: ${border};
             border-bottom: ${border};
             border-bottom-left-radius: 15px;
+
+            @media print {
+                print-color-adjust: exact;
+            }
         }
     }
 
@@ -97,6 +101,10 @@ export const TimelineItemWrapper = styled.div`
             border-top: ${border};
             border-bottom-left-radius: 15px;
             border-top-left-radius: 15px;
+
+            @media print {
+                print-color-adjust: exact;
+            }
         }
     }
 
@@ -115,6 +123,10 @@ export const TimelineItemWrapper = styled.div`
             border-top: ${border};
             border-bottom-right-radius: 15px;
             border-top-right-radius: 15px;
+
+            @media print {
+                print-color-adjust: exact;
+            }
         }
     }
 

@@ -19,6 +19,12 @@ const config: GatsbyConfig = {
             },
         },
         "gatsby-plugin-mdx",
+        {
+            resolve: "gatsby-plugin-google-fonts",
+            options: {
+                fonts: ["outfit:400, 700"],
+            },
+        },
     ],
 };
 
