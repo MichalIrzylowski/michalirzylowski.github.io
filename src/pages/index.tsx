@@ -8,17 +8,25 @@ import Body from "../components/Body";
 
 import * as S from "../page-styles/index/styles";
 
-const IndexPage = () => (
-    <S.Paper>
-        <S.DownlaodCvButtonWrapper>
-            <S.DownlaodCvButton onClick={window && window.print}>
-                Get CV!
-            </S.DownlaodCvButton>
-        </S.DownlaodCvButtonWrapper>
-        <Top />
-        <Body />
-    </S.Paper>
-);
+const IndexPage = () => {
+    const handlePrint = () => {
+        if (window) {
+            window.print();
+        }
+    };
+
+    return (
+        <S.Paper>
+            <S.DownlaodCvButtonWrapper>
+                <S.DownlaodCvButton onClick={handlePrint}>
+                    Get CV!
+                </S.DownlaodCvButton>
+            </S.DownlaodCvButtonWrapper>
+            <Top />
+            <Body />
+        </S.Paper>
+    );
+};
 
 export default IndexPage;
 
