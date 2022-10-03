@@ -14,6 +14,10 @@ const Head: FC<HeadProps> = ({ children }) => {
     return (
         <>
             <title>{title.site?.siteMetadata?.title}</title>
+            <meta
+                name="description"
+                content={title.site?.siteMetadata?.description as string}
+            ></meta>
             <link rel="icon" type="image/png" href={favicon} />
             {children}
             <GlobalStyles />
@@ -28,6 +32,7 @@ export const query = graphql`
         site {
             siteMetadata {
                 title
+                description
             }
         }
     }
