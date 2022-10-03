@@ -24,7 +24,7 @@ const config: GatsbyConfig = {
         {
             resolve: "gatsby-plugin-google-fonts",
             options: {
-                fonts: ["outfit:400, 700"],
+                fonts: ["outfit"],
             },
         },
         {
