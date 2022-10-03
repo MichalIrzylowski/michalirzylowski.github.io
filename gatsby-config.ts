@@ -11,6 +11,8 @@ const config: GatsbyConfig = {
     graphqlTypegen: true,
     plugins: [
         "gatsby-plugin-styled-components",
+        "gatsby-plugin-image",
+        "gatsby-plugin-sharp",
         {
             resolve: "gatsby-source-filesystem",
             options: {
@@ -23,6 +25,12 @@ const config: GatsbyConfig = {
             resolve: "gatsby-plugin-google-fonts",
             options: {
                 fonts: ["outfit:400, 700"],
+            },
+        },
+        {
+            resolve: "gatsby-plugin-html-attributes",
+            options: {
+                lang: "en",
             },
         },
     ],

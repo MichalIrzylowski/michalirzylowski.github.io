@@ -4,9 +4,10 @@ import { colors } from "../../styles/colors";
 const border = `3px solid ${colors.orange}`;
 
 const dotSize = "14px";
-export const Period = styled.h6`
+export const Period = styled.h3`
     color: ${colors.blue};
     position: relative;
+    font-size: 12px;
 
     ::before {
         content: "";

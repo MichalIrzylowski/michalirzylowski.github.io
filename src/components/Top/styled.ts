@@ -20,21 +20,6 @@ export const Header = styled.header`
     }
 `;
 
-export const MyPicture = styled.img`
-    grid-area: picture;
-    border-radius: 50%;
-    width: 100%;
-
-    @media screen and (max-width: 1024px) {
-        max-width: 500px;
-        margin: 30px auto 0;
-    }
-
-    @media print {
-        print-color-adjust: exact;
-    }
-`;
-
 export const Headings = styled.div`
     display: flex;
     flex-direction: column;
