@@ -15,10 +15,11 @@ export const Body = styled.article`
 
     @media print {
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 3fr 7fr;
         grid-template-rows: auto;
         grid-template-areas: "simple elaborated";
         grid-gap: 60px;
+        margin-top: 0;
     }
 `;
 

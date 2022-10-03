@@ -20,6 +20,10 @@ export const ListItem = styled.li`
 const iconStyles = css`
     color: ${colors.blue};
     margin-right: 20px;
+
+    @media print {
+        margin-right: 10px;
+    }
 `;
 
 export const TelephoneIcon = styled(Telephone)`

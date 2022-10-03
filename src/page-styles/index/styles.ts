@@ -6,6 +6,7 @@ export const Paper = styled.main`
     box-shadow: 0 50px 75px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     padding: 30px;
+    position: relative;
 
     @media screen and (min-width: 1024px) {
         padding: 60px;
@@ -15,6 +16,7 @@ export const Paper = styled.main`
 
     @media print {
         padding: 0;
+        padding-right: 10px;
         max-width: unset;
         margin: 0;
         box-shadow: none;
@@ -23,7 +25,7 @@ export const Paper = styled.main`
 
 export const DownlaodCvButtonWrapper = styled.div`
     @media screen and (max-width: 1024px) {
-        display: none;
+        /* display: none; */
     }
 
     @media print {
@@ -31,8 +33,8 @@ export const DownlaodCvButtonWrapper = styled.div`
     }
 
     position: absolute;
-    top: 70px;
-    right: 150px;
+    top: 20px;
+    right: 20px;
 `;
 
 export const DownlaodCvButton = styled.button`

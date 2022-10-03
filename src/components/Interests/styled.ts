@@ -27,6 +27,10 @@ export const ImageBackground = styled.div`
     padding: 5px;
     border-radius: 5px;
     margin-right: 10px;
+
+    @media print {
+        background-color: ${colors.white};
+    }
 `;
 
 const iconStyles = css`
@@ -34,7 +38,6 @@ const iconStyles = css`
 
     @media print {
         color: ${colors.blue};
-        print-color-adjust: exact;
     }
 `;
 

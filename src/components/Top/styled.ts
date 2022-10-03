@@ -14,7 +14,7 @@ export const Header = styled.header`
 
     @media print {
         display: grid;
-        grid-template-columns: 3fr 7fr;
+        grid-template-columns: 4.2fr 7fr;
         grid-template-areas: "picture details";
         grid-gap: 60px;
     }
