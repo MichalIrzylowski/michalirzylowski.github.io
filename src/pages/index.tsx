@@ -11,7 +11,7 @@ import * as S from "../page-styles/index/styles";
 const IndexPage = () => (
     <S.Paper>
         <S.DownlaodCvButtonWrapper>
-            <S.DownlaodCvButton onClick={window.print}>
+            <S.DownlaodCvButton onClick={window && window.print}>
                 Get CV!
             </S.DownlaodCvButton>
         </S.DownlaodCvButtonWrapper>
