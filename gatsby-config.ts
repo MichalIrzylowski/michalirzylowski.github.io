@@ -30,12 +30,6 @@ const config: GatsbyConfig = {
         },
         "gatsby-plugin-mdx",
         {
-            resolve: "gatsby-plugin-google-fonts",
-            options: {
-                fonts: ["outfit"],
-            },
-        },
-        {
             resolve: "gatsby-plugin-html-attributes",
             options: {
                 lang: "en",
