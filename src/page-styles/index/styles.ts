@@ -25,7 +25,7 @@ export const Paper = styled.main`
 
 export const DownlaodCvButtonWrapper = styled.div`
     @media screen and (max-width: 1024px) {
-        /* display: none; */
+        display: none;
     }
 
     @media print {
