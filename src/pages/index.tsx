@@ -29,7 +29,7 @@ const IndexPage = () => {
 export default IndexPage;
 
 const mainImgStyles =
-    "{grid-area: picture; border-radius: 50%; width: 100%; @media screen and (max-width: 1024px) {max-width: 500px; margin: 30px auto 0;} @media print { print-color-adjust: exact; }";
+    "{display: inline-block; grid-area: picture; border-radius: 50%; width: 100%; @media screen and (max-width: 1024px) {max-width: 500px; margin: 30px auto 0;} @media print { print-color-adjust: exact; }";
 
 export const Head = () => (
     <HeadCore>
