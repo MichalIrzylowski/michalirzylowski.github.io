@@ -13,7 +13,7 @@ const Top = () => (
         />
         <S.Headings>
             <S.Name>Michal Irzylowski</S.Name>
-            <S.Role>Front-end Developer</S.Role>
+            <S.Role>Front-end Engeneer</S.Role>
         </S.Headings>
     </S.Header>
 );

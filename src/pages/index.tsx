@@ -1,21 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Top from "../components/Top";
 import Body from "../components/Body";
 
 import * as S from "../page-styles/index/styles";
+import { useCompanyName, useSetCompanyName } from "../providers/CompanyName";
 
 const IndexPage = () => {
-    const handlePrint = () => {
-        if (window) {
-            window.print();
+    const setCompanyName = useSetCompanyName();
+    const companyName = useCompanyName();
+
+    const handlePreparePageForPrint = () => {
+        const companyName = window.prompt("What is your company name?");
+
+        if (companyName) {
+            setCompanyName(companyName);
         }
     };
+
+    useEffect(() => {
+        if (companyName && window) {
+            window.print();
+        }
+    }, [companyName]);
 
     return (
         <S.Paper>
             <S.DownlaodCvButtonWrapper>
-                <S.DownlaodCvButton onClick={handlePrint}>
+                <S.DownlaodCvButton onClick={handlePreparePageForPrint}>
                     Get CV!
                 </S.DownlaodCvButton>
             </S.DownlaodCvButtonWrapper>

@@ -1,5 +1,6 @@
 import React from "react";
 
+import Clause from "../clause";
 import ContactInfo from "../ContactInfo";
 import Education from "../Education";
 import Experience from "../Experience";
@@ -17,6 +18,7 @@ const Body = () => (
             <Education />
             <Languages />
             <Interests />
+            <Clause />
         </S.Simple>
         <S.Elabrated>
             <Profile />
